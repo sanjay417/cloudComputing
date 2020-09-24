@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Student Form</title>
+</head>
+
+<body>
+  <h3>STUDENT FORM</h3>
+<form action="/submit" method="post"> {% csrf_token %}
+  <table cellpadding="10">
+    {% if flag %}
+        <h5>INFORMATION SUBMITTED</h5>
+      {% endif %}
+
+      <input type="search" placeholder="Enter Student ID, First name or Last name" aria-label="Search" name="search" id="search" size="35"> &nbsp; &nbsp;
+      <button type="submit" formaction="/search" formmethod="post"> Search </button>
+
+
+    <tr>
+      <td>FIRST NAME</td>
+      <td><label>
+          <input type="text" name="First_Name" maxlength="30" />
+      </label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>LAST NAME</td>
+      <td><label>
+          <input type="text" name="Last_Name" maxlength="30" />
+      </label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>STUDENT ID</td>
+      <td>
+          <label>
+              <input type="text" name="Student_ID" maxlength="10" />
+          </label>
+      </td>
+    </tr>
+
+    <tr>
+      <td>EMAIL ID</td>
+      <td><label>
+          <input type="text" name="Email_Id" maxlength="100" />
+      </label></td>
+    </tr>
+
+    <tr>
+      <td>MAILING ADDRESS <br /><br /><br /></td>
+      <td><label>
+          <textarea name="Address" rows="4" cols="30"></textarea>
+      </label></td>
+    </tr>
+
+     <tr>
+      <td>GPA</td>
+      <td><label>
+          <input type="text" name="gpa" maxlength="10" />
+      </label></td>
+    </tr>
+
+    <tr>
+        <td><label>
+            <button type="submit"> Submit </button>
+        </label></td>
+
+         <td><label>
+            <button type="submit" formaction="/showStudents"> Show Students </button>
+        </label></td>
+    </tr>
+
+  </table>
+
+</form>
+
+</body>
+
+</html>

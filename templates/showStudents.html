@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+</head>
+<body>
+    <table cellpadding="15" border="5">
+    <tr>
+        <th>Student ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email ID</th>
+        <th>Address</th>
+        <th>GPA</th>
+    </tr>
+        {% for i in rows %}
+            <tr>
+                <td>{{ i.0 }}</td>
+                <td>{{ i.1 }}</td>
+                <td>{{ i.2 }}</td>
+                <td>{{ i.3 }}</td>
+                <td>{{ i.4 }}</td>
+                <td>{{ i.5 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+    <form>
+        <button type="submit" formaction="/">Home</button>
+    </form>
+
+</body>
+</html>
