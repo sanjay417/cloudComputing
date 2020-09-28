@@ -15,7 +15,7 @@ def submit(request):
     address = request.POST.get('Address')
     gpa = request.POST.get('gpa')
     print("DATA RECEVIED")
-    conn = mysql.connector.connect(host='localhost', database='project_1', user='root', password='toor')
+    conn = mysql.connector.connect(host='35.232.248.17', database='project_1', user='root', password='toor')
     cursor = conn.cursor()
     query = "Insert into project_1.student (StudentID, firstname, lastname, email, address, GPA) VALUES " \
             "('%s', '%s', '%s', '%s', '%s', '%s')"\
@@ -28,7 +28,7 @@ def submit(request):
 
 def search(request):
     searchParameter = request.POST.get('search')
-    conn = mysql.connector.connect(host='localhost', database='project_1', user='root', password='toor')
+    conn = mysql.connector.connect(host='35.232.248.17', database='project_1', user='root', password='toor')
     cursor = conn.cursor()
     query = "select * from project_1.student where '%s' in (StudentID, firstname, lastname)" % searchParameter
     cursor.execute(query)
@@ -38,7 +38,7 @@ def search(request):
 
 
 def showStudents(request):
-    conn = mysql.connector.connect(host='localhost', database='project_1', user='root', password='toor')
+    conn = mysql.connector.connect(host='35.232.248.17', database='project_1', user='root', password='toor')
     cursor = conn.cursor()
     query = "select * from project_1.student"
     cursor.execute(query)
