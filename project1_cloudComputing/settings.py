@@ -25,7 +25,7 @@ SECRET_KEY = '(-ovp4s32e4%npi6xy0roszs^wyb4_-j%huvz%pys+llee+im_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.154.211.4', '127.0.0.1']
+ALLOWED_HOSTS = ['34.121.225.250']
 
 
 # Application definition
@@ -74,12 +74,13 @@ WSGI_APPLICATION = 'project1_cloudComputing.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
-}"""
+}
+"""
 # [START db_setup]
 if os.getenv('GAE_APPLICATION', None):
     # Running on production App Engine, so connect to Google Cloud SQL using
@@ -109,7 +110,7 @@ else:
         }
     }
 # [END db_setup]
-
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
